@@ -90,6 +90,8 @@ onUnmounted(() => {
         <img
           :src="project.image"
           :alt="project.title"
+          fetchpriority="high"
+          decoding="async"
           class="w-full h-full object-cover"
         >
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
@@ -195,6 +197,8 @@ onUnmounted(() => {
                 <img
                   :src="item.src"
                   :alt="item.caption || `รูปประกอบ ${idx + 1}`"
+                  loading="lazy"
+                  decoding="async"
                   class="w-full h-full object-contain"
                 >
               </div>
@@ -202,6 +206,8 @@ onUnmounted(() => {
                 <img
                   :src="item.src"
                   :alt="item.caption || `รูปประกอบ ${idx + 1}`"
+                  loading="lazy"
+                  decoding="async"
                   class="w-full min-h-[280px] h-80 sm:h-56 object-cover object-top"
                 >
               </template>
@@ -416,6 +422,8 @@ onUnmounted(() => {
                 <img
                   :src="image"
                   :alt="`${project.title} - Image ${index + 1}`"
+                  loading="lazy"
+                  decoding="async"
                   class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                 >
               </div>
@@ -424,6 +432,8 @@ onUnmounted(() => {
                   <img
                     :src="image"
                     :alt="`${project.title} - Image ${index + 1}`"
+                    loading="lazy"
+                    decoding="async"
                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   >
                 </div>
@@ -472,6 +482,7 @@ onUnmounted(() => {
           <img
             :src="selectedImage"
             :alt="`${project.title} - Image ${selectedImageIndex + 1}`"
+            decoding="async"
             class="max-w-full max-h-[82dvh] sm:max-h-[78dvh] w-auto h-auto object-contain"
           >
           <div

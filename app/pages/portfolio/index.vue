@@ -39,7 +39,7 @@ const featuredProjects = computed(() => {
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <UCard
-          v-for="project in featuredProjects"
+          v-for="(project, i) in featuredProjects"
           :key="project.id"
           class="group hover:shadow-xl transition-all duration-300 overflow-hidden"
         >
@@ -50,6 +50,9 @@ const featuredProjects = computed(() => {
             <img
               :src="project.image"
               :alt="project.title"
+              :loading="i < 2 ? 'eager' : 'lazy'"
+              :fetchpriority="i === 0 ? 'high' : 'low'"
+              decoding="async"
               class="transition-transform duration-300 group-hover:scale-105"
               :class="project.category === 'แอปพลิเคชัน' ? 'max-h-full w-auto object-contain' : 'w-full h-full object-cover group-hover:scale-110'"
             >
@@ -81,6 +84,7 @@ const featuredProjects = computed(() => {
                 variant="outline"
                 block
                 trailing-icon="i-lucide-arrow-right"
+                :aria-label="`ดูรายละเอียด ${project.title}`"
               >
                 ดูรายละเอียด
               </UButton>
@@ -128,6 +132,8 @@ const featuredProjects = computed(() => {
             <img
               :src="project.image"
               :alt="project.title"
+              loading="lazy"
+              decoding="async"
               class="transition-transform duration-300 group-hover:scale-105"
               :class="project.category === 'แอปพลิเคชัน' ? 'max-h-full w-auto object-contain' : 'w-full h-full object-cover group-hover:scale-110'"
             >
@@ -160,16 +166,11 @@ const featuredProjects = computed(() => {
                   variant="outline"
                   block
                   trailing-icon="i-lucide-arrow-right"
+                  :aria-label="`ดูรายละเอียด ${project.title}`"
                 >
                   ดูรายละเอียด
                 </UButton>
               </NuxtLink>
-              <UButton
-                icon="i-lucide-external-link"
-                variant="ghost"
-                color="neutral"
-                square
-              />
             </div>
           </div>
         </UCard>
