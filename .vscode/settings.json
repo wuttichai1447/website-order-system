@@ -1,0 +1,9 @@
+{
+  "vue.inlayHints.missingProps": false,
+  "volar.takeOverMode.enabled": false,
+  "vetur.validation.template": false,
+  "vetur.validation.script": false,
+  "vetur.validation.style": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
+}
