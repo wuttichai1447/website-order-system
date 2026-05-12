@@ -283,15 +283,15 @@ export const useProjects = () => {
       description: 'เว็บไซต์แนะนำระบบโซลาร์เซลล์และพลังงานแสงอาทิตย์ พร้อมคำนวณต้นทุนและประหยัดค่าไฟ',
       longDescription: 'ออกแบบและพัฒนาเว็บไซต์เกี่ยวกับพลังงานแสงอาทิตย์และระบบโซลาร์เซลล์ ประกอบด้วยข้อมูลผลิตภัณฑ์ แผงโซลาร์ อินเวอร์เตอร์ ระบบกักเก็บพลังงาน เคสศึกษาลูกค้า เครื่องคำนวณประหยัดค่าไฟ และฟอร์มขอใบเสนอราคา รองรับการแสดงผลบนมือถือและ SEO',
       category: 'เว็บไซต์',
-      image: '/images/portfolio/solar/jdoubleohome.JPG',
+      image: '/images/portfolio/solar/jdoubleohome.jpg',
       gallery: [
-        '/images/portfolio/solar/jdoubleotwo.JPG',
-        '/images/portfolio/solar/jdoubleothree.JPG',
-        '/images/portfolio/solar/jdoubleofore.JPG'
+        '/images/portfolio/solar/jdoubleotwo.jpg',
+        '/images/portfolio/solar/jdoubleothree.jpg',
+        '/images/portfolio/solar/jdoubleofore.jpg'
       ],
       descriptionImages: [
-        { src: '/images/portfolio/solar/jdoubleotwo.JPG', caption: 'ตัวอย่างการติดตั้งแผงโซลาร์บนหลังคา' },
-        { src: '/images/portfolio/solar/jdoubleothree.JPG', caption: 'ระบบอินเวอร์เตอร์และ monitoring' }
+        { src: '/images/portfolio/solar/jdoubleotwo.jpg', caption: 'ตัวอย่างการติดตั้งแผงโซลาร์บนหลังคา' },
+        { src: '/images/portfolio/solar/jdoubleothree.jpg', caption: 'ระบบอินเวอร์เตอร์และ monitoring' }
       ],
       features: [
         'แนะนำระบบโซลาร์เซลล์และอุปกรณ์',
